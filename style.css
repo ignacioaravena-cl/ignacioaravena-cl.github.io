@@ -52,7 +52,7 @@ body {
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 384px 1fr;
+  grid-template-columns: 296px 1fr;
   gap: 68px;
   align-items: start;
 }
