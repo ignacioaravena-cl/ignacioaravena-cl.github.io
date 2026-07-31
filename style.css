@@ -326,29 +326,22 @@ body {
 .post .role { color: var(--muted); font-style: italic; font-size: 0.96rem; margin: 7px 0 8px; }
 .post p:not(.role) { font-size: 0.98rem; color: #38352f; margin: 0; }
 
-/* institution emblem (brand colour tile) */
-.tpost { display: flex; gap: 22px; align-items: flex-start; }
-.tpost .emblem {
-  flex: 0 0 auto;
-  width: 96px;
-  aspect-ratio: 3 / 4;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  color: #fff;
-  font-family: var(--mono);
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: 0.12em;
-  text-align: center;
-  line-height: 1.35;
+/* institution accent (colored left rule) + bullet list */
+.tpost { border-left: 3px solid var(--rule); padding-left: 20px; }
+.tpost.lse   { border-left-color: #c8102e; }
+.tpost.nyu   { border-left-color: #57068c; }
+.tpost.chile { border-left-color: #2277b8; }
+.tlist { list-style: none; margin: 8px 0 0; padding: 0; }
+.tlist li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 7px;
+  font-size: 0.98rem;
+  color: #38352f;
+  line-height: 1.5;
 }
-.tpost .body { flex: 1 1 auto; min-width: 0; }
-.emblem-lse   { background: #c8102e; }
-.emblem-nyu   { background: #57068c; }
-.emblem-chile { background: #2277b8; }
+.tlist li:last-child { margin-bottom: 0; }
+.tlist li::before { content: "–"; position: absolute; left: 0; color: var(--faint); }
 
 /* ---------- writing / policy entries ---------- */
 .entry { padding: 22px 0; border-top: 1px solid var(--rule); }
@@ -501,7 +494,6 @@ body {
   .affil { display: inline-block; text-align: left; }
   .content { padding: 40px 0 72px; max-width: 640px; }
   .study .cover { width: 84px; }
-  .tpost .emblem { width: 72px; }
   .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 6px; margin-top: 8px; }
   .nav a { border-left: 0; padding: 6px 12px; border: 1px solid var(--rule); }
   .nav a:hover { border-color: var(--faint); }
