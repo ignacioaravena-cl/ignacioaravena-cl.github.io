@@ -24,7 +24,7 @@
   --serif: "Newsreader", Georgia, "Times New Roman", serif;
   --mono:  "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  --maxw: 1120px;
+  --maxw: 1180px;
 }
 
 * { box-sizing: border-box; }
@@ -52,8 +52,8 @@ body {
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 296px 1fr;
-  gap: 76px;
+  grid-template-columns: 384px 1fr;
+  gap: 68px;
   align-items: start;
 }
 
@@ -110,11 +110,11 @@ body {
   list-style: none;
   margin: 0 0 26px;
   padding: 0;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.5;
+  line-height: 1.45;
 }
-.affil li { margin-bottom: 9px; padding-left: 15px; position: relative; }
+.affil li { margin-bottom: 10px; padding-left: 14px; position: relative; }
 .affil li::before {
   content: "";
   position: absolute; left: 0; top: 0.62em;
@@ -151,12 +151,12 @@ body {
 /* ---------- content ---------- */
 .section-label {
   font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--faint);
-  margin: 0 0 22px;
-  padding-bottom: 12px;
+  color: var(--muted);
+  margin: 0 0 24px;
+  padding-bottom: 13px;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -335,11 +335,15 @@ body {
     position: static;
     padding: 48px 0 8px;
     max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
   }
-  .content { padding: 40px 0 72px; max-width: 640px; }
-  .portrait { max-width: 200px; }
+  .portrait { max-width: 220px; margin-left: auto; margin-right: auto; }
   .name { font-size: 2rem; }
-  .nav { display: flex; flex-wrap: wrap; gap: 4px 6px; margin-top: 8px; }
+  /* affiliations read cleaner centered without the hanging dash */
+  .affil { display: inline-block; text-align: left; }
+  .content { padding: 40px 0 72px; max-width: 640px; }
+  .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 6px; margin-top: 8px; }
   .nav a { border-left: 0; padding: 6px 12px; border: 1px solid var(--rule); }
   .nav a:hover { border-color: var(--faint); }
   .nav a[aria-current="page"] { border-color: var(--accent); color: var(--accent-deep); }
